@@ -83,7 +83,16 @@ public class FiapBankAtm {
                         }
                         break;
                     case 3:
-                        System.out.println("Saque...");
+                        System.out.print("Digite o valor do saque: R$ ");
+                        double valorSaque = scanner.nextDouble();
+                        if (valorSaque <= 0) {
+                            System.out.println("Valor invalido! O saque deve ser maior que zero.");
+                        } else if (valorSaque > saldo) {
+                            System.out.println("Saldo insuficiente!");
+                        } else {
+                            saldo -= valorSaque;
+                            System.out.printf("Saque de R$ %.2f realizado com sucesso!%n", valorSaque);
+                        }
                         break;
                     case 4:
                         System.out.println("O FIAP Bank agradece sua preferencia!");
