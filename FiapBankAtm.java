@@ -49,7 +49,7 @@ public class FiapBankAtm {
         }
 
         if (!loginOk) {
-            System.out.println("ACESSO BLOQUEADO");
+            System.out.println("ACESSO BLOQUEADO! Procure sua agencia.");
             scanner.close();
             System.exit(0);
         }
@@ -59,7 +59,7 @@ public class FiapBankAtm {
         boolean menuAtivo = true;
 
         while (menuAtivo) {
-            System.out.println("\n===== FIAP Bank =====");
+            System.out.println("\n===== FIAP Bank - " + primeiroNome + " =====");
             System.out.println("[ 1 ] Consultar Saldo");
             System.out.println("[ 2 ] Fazer Deposito");
             System.out.println("[ 3 ] Fazer Saque");
