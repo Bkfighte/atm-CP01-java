@@ -73,7 +73,14 @@ public class FiapBankAtm {
                         System.out.printf("Saldo atual: R$ %.2f%n", saldo);
                         break;
                     case 2:
-                        System.out.println("Deposito...");
+                        System.out.print("Digite o valor do deposito: R$ ");
+                        double valorDeposito = scanner.nextDouble();
+                        if (valorDeposito <= 0) {
+                            System.out.println("Valor invalido! O deposito deve ser maior que zero.");
+                        } else {
+                            saldo += valorDeposito;
+                            System.out.printf("Deposito de R$ %.2f realizado com sucesso!%n", valorDeposito);
+                        }
                         break;
                     case 3:
                         System.out.println("Saque...");
