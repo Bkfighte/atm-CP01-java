@@ -53,6 +53,44 @@ public class FiapBankAtm {
             System.exit(0);
         }
 
+        // menu principal
+        boolean menuAtivo = true;
+
+        while (menuAtivo) {
+            System.out.println("\n===== FIAP Bank =====");
+            System.out.println("[ 1 ] Consultar Saldo");
+            System.out.println("[ 2 ] Fazer Deposito");
+            System.out.println("[ 3 ] Fazer Saque");
+            System.out.println("[ 4 ] Sair");
+            System.out.print("Escolha uma opcao: ");
+
+            if (scanner.hasNextInt()) {
+                int opcao = scanner.nextInt();
+
+                switch (opcao) {
+                    case 1:
+                        System.out.println("Saldo...");
+                        break;
+                    case 2:
+                        System.out.println("Deposito...");
+                        break;
+                    case 3:
+                        System.out.println("Saque...");
+                        break;
+                    case 4:
+                        System.out.println("O FIAP Bank agradece sua preferencia!");
+                        menuAtivo = false;
+                        break;
+                    default:
+                        System.out.println("Opcao invalida! Tente novamente.");
+                        break;
+                }
+            } else {
+                System.out.println("Opcao invalida! Tente novamente.");
+                scanner.next(); // limpar entrada invalida
+            }
+        }
+
         scanner.close();
     }
 }
