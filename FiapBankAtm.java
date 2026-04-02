@@ -81,6 +81,7 @@ public class FiapBankAtm {
                         } else {
                             saldo += valorDeposito;
                             System.out.printf("Deposito de R$ %.2f realizado com sucesso!%n", valorDeposito);
+                            System.out.printf("Saldo atual: R$ %.2f%n", saldo);
                         }
                         break;
                     case 3:
@@ -93,6 +94,7 @@ public class FiapBankAtm {
                         } else {
                             saldo -= valorSaque;
                             System.out.printf("Saque de R$ %.2f realizado com sucesso!%n", valorSaque);
+                            System.out.printf("Saldo atual: R$ %.2f%n", saldo);
                         }
                         break;
                     case 4:
