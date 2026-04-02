@@ -8,7 +8,7 @@ public class FiapBankAtm {
         System.out.print("Digite seu nome completo: ");
         String nomeCompleto = scanner.nextLine().trim();
         String primeiroNome = nomeCompleto.split(" ")[0];
-        System.out.println("Ola, " + primeiroNome + "! Bem-vindo(a) ao FIAP Bank!");
+        System.out.println("Ola, " + primeiroNome + "! Bem-vindo(a) ao FIAP Bank!\n");
 
         // cadastro de senha
         String senhaForte = "";
@@ -26,7 +26,8 @@ public class FiapBankAtm {
             }
         }
 
-        // login
+        // login do usuario
+        System.out.println();
         int tentativasLogin = 0;
         boolean loginOk = false;
 
