@@ -54,6 +54,7 @@ public class FiapBankAtm {
         }
 
         // menu principal
+        double saldo = 0.00;
         boolean menuAtivo = true;
 
         while (menuAtivo) {
@@ -69,7 +70,7 @@ public class FiapBankAtm {
 
                 switch (opcao) {
                     case 1:
-                        System.out.println("Saldo...");
+                        System.out.printf("Saldo atual: R$ %.2f%n", saldo);
                         break;
                     case 2:
                         System.out.println("Deposito...");
