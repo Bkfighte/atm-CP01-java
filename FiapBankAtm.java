@@ -26,6 +26,33 @@ public class FiapBankAtm {
             }
         }
 
+        // login
+        int tentativasLogin = 0;
+        boolean loginOk = false;
+
+        while (tentativasLogin < 3) {
+            System.out.print("Digite sua senha para entrar: ");
+            String senhaDigitada = scanner.nextLine();
+
+            if (senhaDigitada.equals(senhaForte)) {
+                loginOk = true;
+                System.out.println("Login realizado com sucesso!");
+                break;
+            } else {
+                tentativasLogin++;
+                int restantes = 3 - tentativasLogin;
+                if (restantes > 0) {
+                    System.out.println("Senha incorreta! Voce tem " + restantes + " tentativa(s) restante(s).");
+                }
+            }
+        }
+
+        if (!loginOk) {
+            System.out.println("ACESSO BLOQUEADO");
+            scanner.close();
+            System.exit(0);
+        }
+
         scanner.close();
     }
 }
