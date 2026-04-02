@@ -98,7 +98,7 @@ public class FiapBankAtm {
                         }
                         break;
                     case 4:
-                        System.out.println("O FIAP Bank agradece sua preferencia!");
+                        System.out.println("O FIAP Bank agradece sua preferencia, " + primeiroNome + "!");
                         menuAtivo = false;
                         break;
                     default:
